@@ -16,7 +16,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline; 
   font-family: 'Lato', sans-serif; 
-  line-height:1.5; overflow-x: hidden;  }
+  line-height:1.5;  }
 article, bigarticle, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 body { line-height: 1; }
 ol, ul { list-style: none; }
@@ -38,7 +38,7 @@ body {
 
 p { margin: 0 0 20px 0; }
 
-header { margin-top: 75px; margin-bottom: 25px; }  
+header { margin-top: 50px; margin-bottom: 25px; }  
 header .title h3 { text-align: left; color: #565656; }
 
 header .social{
@@ -319,11 +319,21 @@ legend span {
 
 /* #Media
 ================================================== */
-iframe, video { 
-  float: right; 
-  margin-top: -15px;
-  margin-left: 20px; 
-  margin-bottom: 10px;
+.media-wrapper {
+  position:relative;
+  padding-bottom:56.25%; /* 16:9 */
+  padding-top:25px;
+  height:0;
+  margin:0 auto; 
+  margin-bottom: 10px;}
+
+.media-wrapper iframe,.media-wrapper video { 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
   -webkit-box-shadow: 0 1px 3px #c1c1c1;
   -moz-box-shadow: 0 1px 3px #c1c1c1;
   box-shadow: 0 1px 3px #c1c1c1; }

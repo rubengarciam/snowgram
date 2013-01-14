@@ -30,6 +30,7 @@ A clean, minimal, simple and responsive theme for *Scriptogr.am*. Any feedback i
     - Cleaner, more readable typos
     - Added fade in/out for links and social icons
     - Decreased css file size
+    - Video (iframe) full wifth and responsive
 
 * **v0.4**
 
