@@ -1,7 +1,7 @@
 Snowgr.am
 ====
 
-A clean, minimal, simple and responsive theme for *Scriptogr.am*. Any feedback is more than welcome](https://twittercom/intent/tweet?source=webclient&text=@rubengarciam)
+A clean, minimal, simple and responsive theme for *Scriptogr.am*. Any feedback is more than [welcome](https://twittercom/intent/tweet?source=webclient&text=@rubengarciam).
 
 ![snowgr.am on devices](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgr.am.devices.png)
 
