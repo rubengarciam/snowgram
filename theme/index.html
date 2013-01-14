@@ -1,0 +1,206 @@
+<!-- Snowgr.am Theme v0.5. Created by @rubengarciam. Using Skeleton Framework v1.2 -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>{{author}}{{#is_post}}{{#posts}} | {{title}}{{/posts}}{{/is_post}}{{#is_page}}{{#posts}} | {{title}}{{/posts}}{{/is_page}}</title>
+  <meta name="description" content="Skeleton: Beautiful Boilerplate for Responsive, Mobile-Friendly Development">
+  <meta name="author" content="Dave Gamache">
+  <link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+  <meta name="description" content="{{author}} {{blog_title}}" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="ROBOTS" content="INDEX,FOLLOW">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="description" content="{{author}} | {{blog_title}}">
+  <meta property="og:url" content="{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}">
+  <meta property="og:site_name" content="{{#posts}}{{#is_post}}{{title}} - {{/is_post}}{{/posts}}{{author}} on scriptogr.am">
+  <meta property="og:title" content="{{#posts}}{{#is_post}}{{title}} - {{/is_post}}{{/posts}}{{author}} on scriptogr.am" />
+  <meta property="og:description" content="{{author}} | {{blog_title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="fb:app_id" content="241164325961701" />
+  <meta property="og:image" content="https://twimg0-a.akamaihd.net/profile_images/1733970682/scriptogram.png" />
+  <meta property="twitter:account_id" content="17346623" />
+  <link rel='canonical' href='{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}' />
+  <link rel="shortcut icon" href="http://scriptogr.am/lib/img/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{base_url}}/feed" />
+  <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- FONTS -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="http://www.getskeleton.com/src/stylesheets/skeleton.css">
+  {{css}}
+
+  <!-- Favicon
+  ================================================== -->
+  <link rel="shortcut icon" href="https://dl.dropbox.com/u/3083717/rubengarciam/img/favicon.ico">
+</head>
+<body>
+  <div class="container">
+		
+	<!-- HEADER -->
+	<div class="sixteen columns">
+		<header>
+			<div class="title">
+				<h3><a href="{{home_link}}">{{author}}</a> <small>- {{blog_title}}</small><span class="social"><a href="http://www.last.fm/user/chokedamp" title="Last.fm" alt="Last.fm"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/lastfm.png"/></a><a href="http://open.spotify.com/user/rubs" title="Spotify" alt="Spotify"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/spotify.png"/></a><a href="http://instagram.com/rubengarciam/" title="instagr.am" alt="instagr.am"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/instagram.png"/></a><a href="http://www.facebook.com/rubengarciamohedano" title="Facebook" alt="Facebook"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/facebook.png"/></a><a href="http://www.linkedin.com/in/rubengarciamohedano" title="LinkedIn" alt="LinkedIn"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/linkedin.png"/></a><a href="https://twitter.com/#!/rubengarciam" title="Twitter" alt="Twitter"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/twitter.png"/></a></span></h3>
+			</div>
+			<div class="navbar">
+		        <ul>{{#pages}}<li><a href="{{permalink}}">{{title}}</a></li>{{/pages}}</ul>
+			</div>  
+    	<div class="clear"></div>
+    	</header>     
+	</div>
+
+	<!-- CONTENT -->
+	<div class="sixteen columns">
+    {{#posts}}
+      	{{#is_index}}
+	      	<article>      	
+				<div class="title"><h5><a href="{{permalink}}">{{title}}</a></h5></div>
+	          	{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
+				<div class="content">{{content}}</div>
+				<div class="meta">
+					<div class="one-half column date">
+						{{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}} {{#date}}{{prettydate}}{{/date}}
+					</div>
+					<div class="one-half column tags">
+						{{#if_tags}}
+			              	<ul class="tags">{{#tags}}<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>{{/tags}}</ul>  
+		              	{{/if_tags}}
+		            </div>
+
+					<div class="clear"></div>
+				</div>		              	
+	      	</article>
+	      	<hr /> 					       	
+	    {{/is_index}}
+      	{{#is_post}}
+	      	<article>      	
+				<div class="title"><h5><a href="{{permalink}}">{{title}}</a></h5></div>
+	          	{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
+				<div class="content">{{content}}</div>
+				<div class="meta">
+					<div class="one-half column date">
+						{{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}} {{#date}}{{prettydate}}{{/date}}
+					</div>
+					<div class="one-half column tags">
+						{{#if_tags}}
+			            	<ul class="tags">{{#tags}}<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>{{/tags}}</ul>  
+		              	{{/if_tags}}
+		            </div>
+					<div class="clear"></div>
+	            <!--   	<div class="share-buttons">
+	                	<div class="share-twitter">
+	                  		<a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-via="scriptogram">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>             
+	                	</div>
+	                	<div class="share-facebook">
+	                		<div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
+	                	</div>
+	                	<div class="share-gplus">
+	                   		<g:plusone size="medium" href="{{permalink}}"></g:plusone>
+	                	</div>
+	               </div>          
+					<div class="clear"></div> -->
+				</div>		              	
+	      	</article>
+	    {{/is_post}}
+	    {{#is_page}}
+	      	<bigarticle>      	
+				<div class="title"><h5><a href="{{permalink}}">{{title}}</a></h5></div>
+	          	{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
+				<div class="content">{{content}}</div>
+				<div class="meta">
+					<div class="one-half column date">
+						{{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}} {{#date}}{{prettydate}}{{/date}}
+					</div>
+					<div class="one-half column tags">
+						{{#if_tags}}
+							<ul class="tags">{{#tags}}<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>{{/tags}}</ul>  
+		              	{{/if_tags}}
+		            </div>
+					<div class="clear"></div>
+				</div>		              	
+	      	</bigarticle>	      
+	    {{/is_page}} 	    
+	    {{#is_archive}}
+         	{{#archive_divider}}
+       			<div class="archive-inner {{#post_permalink}} link{{/post_permalink}}">
+	          		<div class="{{archive_divider_index}} archive-date-heading">{{archive_divider}}</div>
+	         	</div>        
+         	{{/archive_divider}}
+	         <div class="archive">
+				<div class="archive-inner {{#post_permalink}} link{{/post_permalink}}">
+					<h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}}</h2>
+          			{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
+	        		<div class="archive-date">{{prettydate}}</div>
+       			</div>        
+         	</div>
+	     {{/is_archive}}
+	{{/posts}}
+	</div>
+
+	<!-- FOOTER -->
+	<div class="sixteen columns">
+		<footer>
+	     <p><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/logo.png"/> © 2013 {{author}}. Using <a href="http://www.scriptogr.am">Scriptogr.am</a>. Design created by <a href="https://twitter.com/rubengarciam">@rubengarciam</a> over <a href="http://www.getskeleton.com/">Skeleton framework</a>, inspired by <span title="@alliswell, @graafdemichiel">many</span>. Comments? Just <a href="https://twittercom/intent/tweet?source=webclient&text=@rubengarciam">tweet me!</a></p>
+		</footer>
+	</div>
+
+  </div><!-- container -->
+
+<!-- JS
+================================================== -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/themes/{{theme}}/app.js"></script>
+<!-- Facebook Connect script -->
+<script type="text/javascript">
+(function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=241164325961701";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- Google Analytics script -->  
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-18930100-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- Fitvids auto height script -->
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $("content").fitVids();
+  });
+</script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>                                     
