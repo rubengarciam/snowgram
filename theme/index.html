@@ -1,4 +1,4 @@
-<!-- Snowgr.am Theme v0.5. Created by @rubengarciam. Using Skeleton Framework v1.2 -->
+<!-- Snowgr.am Theme v0.6. Created by @rubengarciam. Using Skeleton Framework v1.2 -->
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -43,54 +43,62 @@
   <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="http://www.getskeleton.com/src/stylesheets/skeleton.css">
+  <link rel="stylesheet" href="http://dropthebit.com/demos/photobox/photobox/photobox.css">
   {{css}}
 
   <!-- Favicon
   ================================================== -->
-  <link rel="shortcut icon" href="https://dl.dropbox.com/u/3083717/rubengarciam/img/favicon.ico">
+  <link rel="shortcut icon" href="http://dl.dropbox.com/u/94652838/images/favicon.ico">
 </head>
 <body>
   <div class="container">
 		
 	<!-- HEADER -->
-	<div class="row">
-		<header>
-			<div class="title">
-				<h3><a href="{{home_link}}">{{author}}</a> <small>- {{blog_title}}</small><span class="social"><a href="http://www.last.fm/user/chokedamp" title="Last.fm" alt="Last.fm"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/lastfm.png"/></a><a href="http://open.spotify.com/user/rubs" title="Spotify" alt="Spotify"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/spotify.png"/></a><a href="http://instagram.com/rubengarciam/" title="instagr.am" alt="instagr.am"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/instagram.png"/></a><a href="http://www.facebook.com/rubengarciamohedano" title="Facebook" alt="Facebook"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/facebook.png"/></a><a href="http://www.linkedin.com/in/rubengarciamohedano" title="LinkedIn" alt="LinkedIn"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/linkedin.png"/></a><a href="https://twitter.com/#!/rubengarciam" title="Twitter" alt="Twitter"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/twitter.png"/></a></span></h3>
+	<header>
+		<div class="row">
+			<div class="twelve columns title">
+				<!-- Standard Header -->
+                <h3><a href="{{home_link}}">{{author}}</a> <small>- {{blog_title}}</small></h3>
+                <!-- Image Header -->
+				<!-- <h3><a href="{{home_link}}"><img src="http://dl.dropbox.com/u/94652838/images/logo.png"/></a></h3> -->
+			</div> 
+			<!-- Navigation bar -->
+			<div class="four column navbar">   
+				<ul>{{#pages}}<li><a href="{{permalink}}">{{title}}</a></li>{{/pages}}</ul>
 			</div>
-			<div class="navbar">
-		        <ul>{{#pages}}<li><a href="{{permalink}}">{{title}}</a></li>{{/pages}}</ul>
-			</div>  
-       	<div class="clear"></div>
-    	</header>     
-	</div>
+    	</div>
+	</header>  
 
 	<!-- CONTENT -->
 	<div class="row">
     {{#posts}}
       	{{#is_index}}
-	      	<article>      	
-				<div class="row title"><h5><a href="{{permalink}}">{{title}}</a></h5></div>
-	          	{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
-				<div class="content">{{content}}</div>
-				<div class="meta">
-					<div class="one-half column date">
-						{{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}} {{#date}}{{prettydate}}{{/date}}
-					</div>
-					<div class="one-half column tags clearfix">
-						{{#if_tags}}
-			              	<ul class="tags">{{#tags}}<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>{{/tags}}</ul>  
-		              	{{/if_tags}}
-		            </div>
-				</div>		           
+      			<!-- COVER VERSION OF INDEX -->
+                <!--<cover>
+                  <div class="title">{{title}}</div>                                    
+                  <div class="image"><a href="{{permalink}}">{{#excerpt}}<img src="{{excerpt}}"/>{{/excerpt}}</a></div>
+                </cover>	-->
+                <!-- FULL WIDTH VERSION OF INDEX -->
+                <article>      	
+					<div class="row title"><h5><a href="{{permalink}}">{{title}}</a></h5></div>
+		          	{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
+					<div class="content">{{content}}</div>
+					<div class="meta">
+						<div class="one-half column date">
+							{{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}} {{#date}}{{prettydate}}{{/date}}
+						</div>
+						<div class="one-half column tags clearfix">
+							{{#if_tags}}
+				              	<ul class="tags">{{#tags}}<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>{{/tags}}</ul>  
+			              	{{/if_tags}}
+			            </div>
+					</div>		           
 					<div class="clear"></div>              
-	      	</article>
-	      	<hr /> 					       	
+	      		</article>        	
 	    {{/is_index}}
       	{{#is_post}}
 	      	<article>      	
 				<div class="title"><h5><a href="{{permalink}}">{{title}}</a></h5></div>
-	          	{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
 				<div class="content">{{content}}</div>
 				<div class="meta">
 					<div class="one-half column date">
@@ -142,27 +150,36 @@
 	         <div class="archive">
 				<div class="archive-inner {{#post_permalink}} link{{/post_permalink}}">
 					<h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}" class="permalink">#</a>{{/post_permalink}}</h2>
-          			{{#excerpt}}<div class="excerpt">{{excerpt}}</div>{{/excerpt}}
 	        		<div class="archive-date">{{prettydate}}</div>
        			</div>        
          	</div>
 	     {{/is_archive}}
 	{{/posts}}
 	</div>
+    
+    <!-- PAGINATION -->
+    <div class="row">
+      <pagination>{{pagination}}</pagination>
+    </div>
 
 	<!-- FOOTER -->
 	<div class="row">
 		<footer>
-	     <p><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/logo.png"/> © 2013 {{author}}. Using <a href="http://www.scriptogr.am">Scriptogr.am</a>. Design created by <a href="https://twitter.com/rubengarciam">@rubengarciam</a> over <a href="http://www.getskeleton.com/">Skeleton framework</a>, inspired by <span title="@alliswell, @graafdemichiel">many</span>. Comments? Just <a href="https://twittercom/intent/tweet?source=webclient&text=@rubengarciam">tweet me!</a></p>
+	     <p>© 2013 {{author}}. Using <a href="http://www.scriptogr.am">Scriptogr.am</a>. <a href="http://rubengarciam.com/snowgr.am">Snowgr.am</a> Theme</p>
+	     <!-- Social Badges -->
+	     <div class="social">
+				<a href="http://www.last.fm/user/chokedamp" title="Last.fm" alt="Last.fm"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/lastfm.png"/></a><a href="http://open.spotify.com/user/rubs" title="Spotify" alt="Spotify"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/spotify.png"/></a><a href="http://instagram.com/rubengarciam/" title="instagr.am" alt="instagr.am"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/instagram.png"/></a><a href="http://www.facebook.com/rubengarciamohedano" title="Facebook" alt="Facebook"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/facebook.png"/></a><a href="http://www.linkedin.com/in/rubengarciamohedano" title="LinkedIn" alt="LinkedIn"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/linkedin.png"/></a><a href="https://twitter.com/#!/rubengarciam" title="Twitter" alt="Twitter"><img src="https://dl.dropbox.com/u/3083717/rubengarciam/img/twitter.png"/></a>
+			</div>
 		</footer>
 	</div>
 
-  </div><!-- container -->
+  </div><!-- CONTAINER -->
 
 <!-- JS
 ================================================== -->
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="/themes/{{theme}}/app.js"></script>
+<script type="text/javascript" src="http://dropthebit.com/demos/photobox/photobox/photobox.js"></script>
 <!-- Facebook Connect script -->
 <script type="text/javascript">
 (function() {
@@ -189,15 +206,11 @@ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www')
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 </script>
-<!-- Fitvids auto height script -->
+<!-- Photobox script -->  
 <script>
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $("content").fitVids();
-  });
+    	$('#gallery a').photobox();
 </script>
-
 <!-- End Document
 ================================================== -->
 </body>
-</html>                                                         
+</html>                                                                                                                                                                                           

@@ -1,5 +1,5 @@
 /*
-* Snowgr.am Theme v0.5
+* Snowgr.am Theme v0.6
 * Created by @rubengarciam
 */
 
@@ -39,13 +39,16 @@ body {
 p { margin: 0 0 20px 0; }
 
 header { margin-top: 50px; margin-bottom: 25px; }  
-header .title h3 { text-align: left; color: #565656; }
 
 header .social{
-  float: right;
   list-style: none;
   text-align: right; 
   margin-right: 0px; }
+
+header .navbar{ float: right; }
+
+cover { width: 179px; display: inline-block; margin: 5px; }
+cover .title { padding-bottom: 5px; }
 
 article .title, bigarticle .title { margin-bottom: 20px; }
 
@@ -82,6 +85,14 @@ h6 { font-size: 14px; line-height: 21px; }
 em { font-style: italic; }
 strong { font-weight: bold; color: #333; }
 small { font-size: 50%; font-weight: normal; }
+
+header .title h3 { text-align: left; color: #565656; }
+
+cover .title{ 
+  font-size: 0.7em; 
+  color: #000; 
+  font-weight: bold; 
+  opacity: 0.9; }
 
 article p { font-size: 1em; }
 article .title, bigarticle .title {
@@ -125,33 +136,35 @@ header .social a { margin-left: 5px; }
 
 article .title a , bigarticle .title a { text-decoration: none; color: #404040; }
 article .title a:hover, bigarticle .title a:hover { color: #007998; }
-
 article .meta a, bigarticle .meta a { color: #888888; text-decoration: none; }
 article .meta a:hover, bigarticle .meta a:hover { color: rgba(136, 136, 136, 0.5); }
 
+pagination a, pagination a:visited { color: #666; font-size: 0.8em;}
+
 /* #Lists
 ================================================== */
-ul, ol { margin-bottom: 20px; }
-ul { list-style: none outside; }
-ol { list-style: decimal; }
-ol, ul.square, ul.circle, ul.disc { margin-left: 30px; }
-ul.square { list-style: square outside; }
-ul.circle { list-style: circle outside; }
+ul, ol { margin-bottom: 20px; margin-left: 20px; }
+ul { list-style: square outside;  }
+ol { list-style: decimal outside; }
 ul.disc { list-style: disc outside; }
+ul li, ol li { line-height:1.5; };
 ul ul, ul ol,
-ol ol, ol ul { margin: 4px 0 5px 30px; font-size: 90%;  }
+ol ol, ol ul { margin: 5px 0 5px 30px; font-size: 90%;  }
 ul ul li, ul ol li,
 ol ol li, ol ul li { margin-bottom: 6px; }
-li { line-height: 18px; margin-bottom: 12px; }
-ul .large li { line-height: 21px; }
-li p { line-height: 21px; }
+ul .large li { line-height:1.8; }
 
-header .navbar li  { display: inline-block; font-weight: bold; text-decoration: none; margin-right: 10px; }
-article .meta .tags li, bigarticle .meta .tags li  { display: inline-block; margin-left: 5px;}
+pagination li { list-style: none; display: inline-block; margin-right: 5px; border-bottom: 1px solid #DEDEDE; padding: 3px 5px 3px 5px; }
+pagination li.active { background: #EEE; }
+
+header .navbar li  { display: inline-block; font-weight: bold; text-decoration: none; margin-right: 10px;}
+article .meta .tags li, bigarticle .meta .tags li  { display: inline-block; margin: 5px;}
 
 /* #Images
 ================================================== */
 p img { margin: 0; }
+
+header h3 img { width: 350px; }
 
 header .social img { 
   width: 24px; 
@@ -169,7 +182,7 @@ header .social img:hover {
 article .content img {
   max-width: 100%;
   height: auto; 
-  border-radius:10px;
+  border-radius:7px;
   -webkit-box-shadow: 0 1px 3px #c1c1c1;
   -moz-box-shadow: 0 1px 3px #c1c1c1;
   box-shadow: 0 1px 3px #c1c1c1; }
@@ -178,8 +191,35 @@ bigarticle .content img {
   max-width: 100%;
   height: auto; }
 
+cover img { 
+  max-width: 100%; 
+  opacity:1.0;
+  border-radius:7px; 
+  -webkit-box-shadow: 0 1px 3px #c1c1c1;
+  -moz-box-shadow: 0 1px 3px #c1c1c1;
+  box-shadow: 0 1px 3px #c1c1c1;  
+  filter:alpha(opacity=10); /* For IE8 and earlier */
+  -o-transition:opacity .2s ease-out, background 2s ease-in;
+  -ms-transition:opacity .2s ease-out, background 2s ease-in;
+  -moz-transition:opacity .2s ease-out, background 2s ease-in;
+  -webkit-transition:opacity .2s ease-out, background 2s ease-in;
+  transition:opacity .2s ease-out, background 2s ease-in; }
+cover img:hover {
+  opacity:0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */ }}
+
 footer img { height: 50px; }
 footer a img { height: 25px; }
+
+#gallery { margin-left: 5px; }
+#gallery a img { width: 72px; margin: 5px; border-radius:5px;filter:alpha(opacity=10); /* For IE8 and earlier */
+  -o-transition:opacity .2s ease-out, background 2s ease-in;
+  -ms-transition:opacity .2s ease-out, background 2s ease-in;
+  -moz-transition:opacity .2s ease-out, background 2s ease-in;
+  -webkit-transition:opacity .2s ease-out, background 2s ease-in;
+  transition:opacity .2s ease-out, background 2s ease-in; }
+#gallery a img:hover {  opacity:0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */ }  }
 
 /* #Buttons
 ================================================== */

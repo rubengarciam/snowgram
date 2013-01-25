@@ -3,27 +3,34 @@ Snowgr.am
 
 A clean, minimal, simple and responsive theme for *Scriptogr.am*. Any feedback is more than [welcome](https://twittercom/intent/tweet?source=webclient&text=@rubengarciam).
 
-![snowgr.am on devices](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgr.am.devices.png)
+![snowgr.am layout iPad](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgr.am.ipad.jpg)
 
-*Features**
+**Features**
 
-* Single column layout
+* Two different layouts: grid or full width-single column
 * Full width image on posts (recommended mininum width of 960px)
-* No widgets, let's you focus on writing (or telling stories or whatever you like)
-* Responsive. Mobile, multi device ready
+* Fully responsive. Mobile, multi device ready
 * Fast, very fast (as much as scriptogr.am can provide)
-* Clean typo
+* Clean, lovely typo
+* No widgets, let's you focus on writing (or telling stories or whatever you like) 
 
 **Upcoming features**
 
 * Variables (linked to next *scriptogr.am* release)
+* Dynamic social links (pending variables)
 * LESS CSS
-* Improved video management
-* Dynamic social links
 * Full HTML5 validation
-* Lovely typo
+* Black CSS version
+
+At the moment the change of layouts, social links, etc needs to be performed in the code as _scriptogr.am_ doesn't provide _CSS_ variables support yet.
 
 **Changelog**
+
+* **v0.6**
+
+    - New optional grid layout
+    - Improved CSS
+    - New navbar, pagination and social links (moved to footer)
 
 * **v0.5**
 
