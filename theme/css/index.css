@@ -1,5 +1,5 @@
 /*
-* Snowgr.am Theme v0.6
+* Snowgram Theme v0.6
 * Created by @rubengarciam
 */
 
@@ -40,12 +40,9 @@ p { margin: 0 0 20px 0; }
 
 header { margin-top: 50px; margin-bottom: 25px; }  
 
-header .social{
-  list-style: none;
-  text-align: right; 
-  margin-right: 0px; }
-
-header .navbar{ float: right; }
+header .navbar{ 
+  float: right;
+  text-align: right; }
 
 cover { width: 179px; display: inline-block; margin: 5px; }
 cover .title { padding-bottom: 5px; }
@@ -66,6 +63,10 @@ article .meta .tags, bigarticle .meta .tags {
 
 footer { position: relative; height: 50px; vertical-align: text-bottom; margin-top: 50px; }
 footer p { float: right; color: #888888; position: absolute; bottom: 0; }
+footer .social{
+  list-style: none;
+  text-align: right; 
+  margin-right: 0px; }
 
 hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 
@@ -132,7 +133,6 @@ a:hover, a:focus, a:active { color: rgba(0, 121, 152, 0.5); }
 
 header .navbar li a { color: #666; }
 header .navbar li a:hover { color: rgba(136, 136, 136, 0.5); }
-header .social a { margin-left: 5px; }
 
 article .title a , bigarticle .title a { text-decoration: none; color: #404040; }
 article .title a:hover, bigarticle .title a:hover { color: #007998; }
@@ -140,6 +140,8 @@ article .meta a, bigarticle .meta a { color: #888888; text-decoration: none; }
 article .meta a:hover, bigarticle .meta a:hover { color: rgba(136, 136, 136, 0.5); }
 
 pagination a, pagination a:visited { color: #666; font-size: 0.8em;}
+
+footer .social a { margin-left: 5px; }
 
 /* #Lists
 ================================================== */
@@ -165,19 +167,6 @@ article .meta .tags li, bigarticle .meta .tags li  { display: inline-block; marg
 p img { margin: 0; }
 
 header h3 img { width: 350px; }
-
-header .social img { 
-  width: 24px; 
-  opacity:0.4;
-  filter:alpha(opacity=40); /* For IE8 and earlier */
-  -o-transition:opacity .2s ease-out, background 2s ease-in;
-  -ms-transition:opacity .2s ease-out, background 2s ease-in;
-  -moz-transition:opacity .2s ease-out, background 2s ease-in;
-  -webkit-transition:opacity .2s ease-out, background 2s ease-in;
-  transition:opacity .2s ease-out, background 2s ease-in; }
-header .social img:hover {
-  opacity:1.0;
-  filter:alpha(opacity=100); /* For IE8 and earlier */ }
 
 article .content img {
   max-width: 100%;
@@ -210,6 +199,18 @@ cover img:hover {
 
 footer img { height: 50px; }
 footer a img { height: 25px; }
+footer .social img { 
+  width: 24px; 
+  opacity:0.4;
+  filter:alpha(opacity=40); /* For IE8 and earlier */
+  -o-transition:opacity .2s ease-out, background 2s ease-in;
+  -ms-transition:opacity .2s ease-out, background 2s ease-in;
+  -moz-transition:opacity .2s ease-out, background 2s ease-in;
+  -webkit-transition:opacity .2s ease-out, background 2s ease-in;
+  transition:opacity .2s ease-out, background 2s ease-in; }
+footer .social img:hover {
+  opacity:1.0;
+  filter:alpha(opacity=100); /* For IE8 and earlier */ }
 
 #gallery { margin-left: 5px; }
 #gallery a img { width: 72px; margin: 5px; border-radius:5px;filter:alpha(opacity=10); /* For IE8 and earlier */

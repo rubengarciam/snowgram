@@ -1,30 +1,30 @@
-Snowgr.am
+Snowgram
 ====
 
-A clean, minimal, simple and responsive theme for *Scriptogr.am*. Any feedback is more than [welcome](https://twittercom/intent/tweet?source=webclient&text=@rubengarciam).
+A clean, minimal, simple and responsive theme for *Scriptogram*. Any feedback is more than [welcome](https://twittercom/intent/tweet?source=webclient&text=@rubengarciam).
 
-![snowgr.am layout iPad](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgr.am.ipad.jpg)
+![snowgram layout iPad](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgram.ipad.jpg)
 
 **Features**
 
 * Two different layouts: grid or full width-single column
 * Full width image on posts (recommended mininum width of 960px)
 * Fully responsive. Mobile, multi device ready
-* Fast, very fast (as much as scriptogr.am can provide)
+* Fast, very fast (as much as scriptogram can provide)
 * Clean, lovely typo
 * No widgets, let's you focus on writing (or telling stories or whatever you like) 
 
 **Upcoming features**
 
-* Variables (linked to next *scriptogr.am* release)
+* Variables (linked to next *scriptogram* release)
 * Dynamic social links (pending variables)
 * LESS CSS
 * Full HTML5 validation
 * Black CSS version
 
-At the moment the change of layouts, social links, etc needs to be performed in the code as _scriptogr.am_ doesn't provide _CSS_ variables support yet. The following is a screenshot from the grid layout on a desktop:
+At the moment the change of layouts, social links, etc needs to be performed in the code as _scriptogram_ doesn't provide _CSS_ variables support yet. The following is a screenshot from the grid layout on a desktop:
 
-![snowgr.am grid layout desktop](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgr.am-grid.jpg)
+![snowgram grid layout desktop](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgram-grid.jpg)
 
 **Changelog**
 
@@ -68,4 +68,4 @@ At the moment the change of layouts, social links, etc needs to be performed in 
 
     - First release of the theme
     - Basic responsive design based on [Skeleton Framework](http://www.getskeleton.com/)
-    - Adapted html to scriptogr.am's [Mustache Framework](http://support.scriptogr.am/kb/creating-themes/mustache.github.com)
+    - Adapted html to scriptogram's [Mustache Framework](http://support.scriptogram/kb/creating-themes/mustache.github.com)
