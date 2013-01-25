@@ -22,7 +22,9 @@ A clean, minimal, simple and responsive theme for *Scriptogr.am*. Any feedback i
 * Full HTML5 validation
 * Black CSS version
 
-At the moment the change of layouts, social links, etc needs to be performed in the code as _scriptogr.am_ doesn't provide _CSS_ variables support yet.
+At the moment the change of layouts, social links, etc needs to be performed in the code as _scriptogr.am_ doesn't provide _CSS_ variables support yet. The following is a screenshot from the grid layout on a desktop:
+
+![snowgr.am grid layout desktop](https://dl.dropbox.com/u/3083717/rubengarciam/media/snowgr.am-grid.jpg)
 
 **Changelog**
 
